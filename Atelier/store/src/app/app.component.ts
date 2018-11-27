@@ -8,13 +8,29 @@ import { Product} from './product';
 })
 export class AppComponent {
   title = 'Sneaker\'Store';
-  product: Product;
+  products: Product[] = [];
+
 
   constructor() {
-    this.product = new Product();
-    this.product.brand = "New Balance";
-    this.product.name = "u410cb";
-    this.product.price = 70;
-    this.product.picture = "https://www.chaussures.fr/media/catalog/product/cache/image/650x650//8/0/803577_new_balance_u410cb_classics_niebieski_ac_01.jpg";
+    this.products.push(new Product());
+    this.products[0].brand = 'New Balance';
+    this.products[0].name = 'u410cb';
+    this.products[0].price = 70;
+    this.products[0].picture = 'nb.jpg';
+
+    this.products.push(new Product());
+    this.products[1].brand = 'Adidas';
+    this.products[1].name = 'Trainer';
+    this.products[1].price = 90;
+    this.products[1].picture = 'adtrainer.jpg';
+
+    this.products.push(new Product());
+    this.products[2].brand = 'Vans';
+    this.products[2].name = 'Sk8';
+    this.products[2].price = 110;
+    this.products[2].picture = 'vans.jpg';
+
+
   }
+
 }

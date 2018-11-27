@@ -1,15 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div class="header" style="text-align:center">
 
-  <img id="logo" alt="Store Logo" src="https://freedesignfile.com/upload/2014/06/Creative-low-shoe-vector-graphics-04.jpg">
+  <img id="logo" alt="Store Logo" src="assets/img/logo.jpg">
   <h1>
     {{ title }}
   </h1>
 </div>
 
-<div class="product">
-  <img src="{{ product.picture }}" alt="">
-  <h2>{{ product.brand }} - {{ product.name }}</h2>
-  <h2>{{ product.price | currency:'EUR' }}</h2>
+<section class="galerie">
 
-</div>
+  <app-product-detail *ngFor="let product of products" [product]="product"></app-product-detail>
+
+</section>

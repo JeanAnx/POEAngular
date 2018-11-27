@@ -1,0 +1,17 @@
+
+.product {
+  text-align: center;
+  width: 250px;
+}
+
+.product img {
+  width: 70%;
+}
+
+.product h2 {
+  color: cadetblue;
+  margin-top: 0px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
