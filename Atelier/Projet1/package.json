@@ -1,0 +1,21 @@
+{
+  "name": "projet1",
+  "version": "1.0.0",
+  "description": "1er Atelier TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "atelier",
+    "typescript",
+    "introduction",
+    "Angular"
+  ],
+  "author": "Jean Annaix <jean.annaix@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.1.6"
+  }
+}
