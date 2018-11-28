@@ -1,0 +1,35 @@
+<form (submit)="create(productForm)" #productForm ="ngForm" >
+
+  <div>
+
+    <label for="product-create-title">Marque :</label>
+    <input autofocus required [(ngModel)]="newProduct.brand" required pattern=".{4,}" #titleField="ngModel" type="text" id="product-create-title" name="brand">
+    <p class="error" *ngIf="titleField.invalid && titleField.touched">Champ invalide</p>
+
+  </div>
+
+  <div>
+
+    <label for="product-create-name">Nom du modèle :</label>
+    <input [(ngModel)]="newProduct.name" required #nameField="ngModel" type="text" id="product-create-name" name="name">
+    <p class="error" *ngIf="nameField.invalid && nameField.touched">Champ invalide</p>
+  </div>
+
+  <div>
+
+    <label for="product-create-price">Prix :</label>
+    <input required min="0" [(ngModel)]="newProduct.price" #priceField="ngModel" type="number" id="product-create-price" name="price">
+    <p class="error" *ngIf="priceField.invalid && priceField.touched">Champ invalide</p>
+  </div>
+
+  <div>
+
+    <label for="product-create-picture">Image :</label >
+    <input required [(ngModel)]="newProduct.picture" #pictureField="ngModel" type="text" id="product-create-picture" name="picture" >
+    <p class="error"  *ngIf="pictureField.invalid && pictureField.touched"picture>Champ invalide</p>
+
+  </div>
+
+  <button [disabled]="productForm.form.invalid">Enregistrer</button>
+
+</form>

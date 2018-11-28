@@ -9,6 +9,12 @@
 
 <main>
 
+  <section class="form">
+
+    <app-product-create (productCreated)="add($event)"></app-product-create>
+
+  </section>
+
   <section class="galerie">
 
     <app-product-thumbnail
