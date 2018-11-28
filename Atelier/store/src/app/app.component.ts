@@ -30,8 +30,10 @@ export class AppComponent {
     this.products[2].name = 'Sk8';
     this.products[2].price = 110;
     this.products[2].picture = 'vans.jpg';
-
-
   }
+
+    setCurrent(product: Product): void {
+    this.currentProduct = product;
+    }
 
 }

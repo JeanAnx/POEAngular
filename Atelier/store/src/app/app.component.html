@@ -7,8 +7,24 @@
   </h1>
 </div>
 
-<section class="galerie">
+<main>
 
-  <app-product-detail *ngFor="let product of products" [product]="product"></app-product-detail>
+  <section class="galerie">
 
-</section>
+    <app-product-thumbnail
+      *ngFor="let product of products"
+      [product]="product"
+     (productSelected)="setCurrent($event)"
+    ></app-product-thumbnail>
+
+  </section>
+
+  <section class="display">
+
+    <app-product-detail
+      [product]="currentProduct"
+    ></app-product-detail>
+
+  </section>
+
+</main>

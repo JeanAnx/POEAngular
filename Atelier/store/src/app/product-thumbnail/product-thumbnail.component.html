@@ -1,7 +1,7 @@
-<section class="display">
+<article class="product" (click)="select()">
 
   <img src="assets/img/{{ product.picture }}" alt="{{ product.name }}">
   <h2>{{ product.brand }} - {{ product.name }}</h2>
   <h2>{{ product.price | currency:'EUR' }}</h2>
 
-</section>
+</article>
