@@ -9,6 +9,7 @@ import { Product} from './product';
 export class AppComponent {
   title = 'Sneaker\'Store';
   products: Product[] = [];
+  currentProduct: Product;
 
 
   constructor() {
