@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Product} from './product';
+import {ProductsService} from './products.service';
+import {LoggerService} from './logger.service';
 
 @Component({
   selector: 'app-root',
@@ -11,36 +13,25 @@ export class AppComponent {
   products: Product[] = [];
   currentProduct: Product;
 
+  constructor(productsService: ProductsService , private logger: LoggerService) {
 
-  constructor() {
-    this.products.push(new Product());
-    this.products[0].brand = 'New Balance';
-    this.products[0].name = 'u410cb';
-    this.products[0].price = 70;
-    this.products[0].picture = 'nb.jpg';
-
-    this.products.push(new Product());
-    this.products[1].brand = 'Adidas';
-    this.products[1].name = 'Trainer';
-    this.products[1].price = 90;
-    this.products[1].picture = 'adtrainer.jpg';
-
-    this.products.push(new Product());
-    this.products[2].brand = 'Vans';
-    this.products[2].name = 'Sk8';
-    this.products[2].price = 110;
-    this.products[2].picture = 'vans.jpg';
-
+    this.products = productsService.products;
     this.currentProduct = this.products[0];
+
   }
 
     add(product: Product): void {
+      this.logger.log('Nouveau produit créé');
       this.products.push(product);
       this.currentProduct = product;
     }
 
     setCurrent(product: Product): void {
-    this.currentProduct = product;
+      this.currentProduct = product;
     }
 
 }
+
+
+
+

@@ -1,6 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Product} from '../product';
 import {NgForm} from '@angular/forms';
+import {log} from 'util';
 
 @Component({
   selector: 'app-product-create',
