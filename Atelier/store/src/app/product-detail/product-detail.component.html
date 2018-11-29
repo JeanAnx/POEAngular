@@ -1,7 +1,11 @@
-<section class="display">
+<section class="display"*ngIf="product">
 
   <img src="assets/img/{{ product.picture }}" alt="{{ product.name }}">
   <h2>{{ product.brand }} - {{ product.name }}</h2>
   <h2>{{ product.price | currency:'EUR' }}</h2>
 
 </section>
+
+<div *ngIf="!product">
+ <div>Cliquez sur une paire</div>
+</div>

@@ -1,0 +1,8 @@
+[
+  { "brand":  "Adidas", "name": "Trainer", "price":  100, "picture": "adtrainer.jpg" },
+  { "brand":  "New Balance", "name": "utf8", "price":  80, "picture": "nb.jpg" },
+  { "brand":  "Vans", "name": "Sk8", "price":  85, "picture": "vans.jpg" },
+  { "brand":  "Timberland", "name": "Écrase-merde", "price":  210, "picture": "tim.jpg" },
+  { "brand":  "North Face", "name": "Chaussons", "price": 40, "picture": "chaussonsnf.jpg" }
+
+]
