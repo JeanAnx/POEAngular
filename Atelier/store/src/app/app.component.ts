@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import {Component, Inject} from '@angular/core';
 import { Product} from './product';
 import {ProductsService} from './products.service';
 import {LoggerService} from './logger.service';
+import {SERVER_URL_TOKEN} from './app.config';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,11 @@ export class AppComponent {
   products: Product[] = [];
   currentProduct: Product;
 
-  constructor(productsService: ProductsService , private logger: LoggerService) {
+  constructor(
+    productsService: ProductsService,
+    private logger: LoggerService,
+    @Inject(SERVER_URL_TOKEN) serverUrl: string
+  ) {
 
     this.products = productsService.products;
     this.currentProduct = this.products[0];
