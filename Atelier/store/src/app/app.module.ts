@@ -8,6 +8,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductCreateComponent } from './product-create/product-create.component';
 import {LoggerService} from './logger.service';
 import {configFactory, SERVER_URL, SERVER_URL_TOKEN} from './app.config';
+import {HttpClientModule} from '@angular/common/http';
 
 const COUCOU = new InjectionToken('Coucou');
 const LOGGER_ALIAS = new InjectionToken('Alias vers le logger');
@@ -21,9 +22,10 @@ const SECONDE_CONFIG = new InjectionToken('Deuxième config');
     ProductDetailComponent,
     ProductCreateComponent
   ],
-  imports: [
+  imports: [ // Gestion des fonctionnalités du Framework disponibles dans l'application
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [
     LoggerService,
