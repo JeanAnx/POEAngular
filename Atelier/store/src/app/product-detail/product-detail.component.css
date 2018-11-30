@@ -7,3 +7,10 @@ section {
   box-shadow: 1px 1px 10px grey;
   padding: 15px;
 }
+
+.display {
+  width: 500px;
+  margin: 3em auto;
+  text-align: center;
+  color: cadetblue;
+}

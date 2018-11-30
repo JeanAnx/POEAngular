@@ -1,0 +1,9 @@
+<section class="galerie">
+
+  <app-product-thumbnail
+    *ngFor="let product of products"
+    [product]="product"
+    (productSelected)="goToDetail($event)"
+  ></app-product-thumbnail>
+
+</section>

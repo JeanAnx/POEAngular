@@ -9,7 +9,7 @@ export class LoggerService {
 
   // On peut supprimer le constructeur (pas besoin)
 
-    log(message): void {
+    log(message: any): void {
       console.log(message);
 
   }

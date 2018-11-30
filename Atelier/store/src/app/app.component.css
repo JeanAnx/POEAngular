@@ -8,31 +8,39 @@ body {
   flex-flow: row wrap;
 }
 
+
+
+a {
+  text-decoration: none;
+}
+
 main {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
   align-items: center;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 10px auto;
 }
 
+
 .form {
   width: 800px;
+  margin: 0 auto;
 }
-
+/*
 form {
   width: 75%;
   margin: 0 auto;
   text-align: center;
 }
+*/
 
 .header {
   margin: 20px 0;
 }
 
 .display {
-  width: 500px;
+  width: 300px;
+  height: 700px;
+  margin: 3em auto;
   text-align: center;
 }
 
@@ -50,4 +58,12 @@ h1 , h2 , .display {
 h1 {
   font-family: 'Black Han Sans', sans-serif;
   font-weight: 100;
+}
+
+.galerie {
+  padding: 2em;
+  display: flex;
+  flex-flow: row  wrap;
+  border: 1px solid rgba(95,158,160,0.2);
+  border-radius: 1em;
 }

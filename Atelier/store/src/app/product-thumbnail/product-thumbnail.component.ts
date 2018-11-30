@@ -12,6 +12,8 @@ export class ProductThumbnailComponent implements OnInit {
 
   @Input()
   product: Product;
+  @Input()
+  isActive: boolean;
 
   @Output()
   productSelected = new EventEmitter<Product>();

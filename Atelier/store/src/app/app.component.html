@@ -1,29 +1,27 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="header" style="text-align:center">
-
-  <img id="logo" alt="Store Logo" src="assets/img/logo.jpg">
-  <h1>
+  <a routerLink="">
+    <img id="logo" alt="Store Logo" src="assets/img/logo.jpg">
+    <h1>
     {{ title }}
-  </h1>
+    </h1>
+  </a>
 </div>
 
 <main>
 
+  <app-menu></app-menu>
+  <router-outlet></router-outlet>
+
+  <!--
+
   <section class="form">
 
-    <app-product-create (productCreated)="add($event)"></app-product-create>
+    <app-product-create (productCreated)="add($event)" (productCanceled)="remove($event)"></app-product-create>
 
   </section>
 
-  <section class="galerie">
 
-    <app-product-thumbnail
-      *ngFor="let product of products"
-      [product]="product"
-     (productSelected)="setCurrent($event)"
-    ></app-product-thumbnail>
-
-  </section>
 
   <section class="display">
 
@@ -32,5 +30,7 @@
     ></app-product-detail>
 
   </section>
+
+  -->
 
 </main>

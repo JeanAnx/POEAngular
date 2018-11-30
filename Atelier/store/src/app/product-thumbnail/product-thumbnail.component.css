@@ -1,4 +1,7 @@
 
+h2 {
+  color: cadetblue;
+}
 
 .product {
   text-align: center;
@@ -10,9 +13,12 @@
 }
 
 .product h2 {
-  color: cadetblue;
   margin-top: 0px;
   font-family: 'Noto Sans TC', sans-serif;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: normal;
+}
+
+h2.selected {
+  background-color: gainsboro;
 }
